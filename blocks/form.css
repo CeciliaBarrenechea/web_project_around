@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  width: 330px;
+}
+.form__item {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  color: #c4c4c4;
+  width: 358px;
+  height: 27.3px;
+  border: none;
+  text-align: ;
+  border-bottom: 1px solid #c4c4c4;
+}
+.form__item_el_title {
+  margin: 54px auto 29.8px;
+}
+.form__item_el_link {
+  margin: 0 auto 48px;
+}

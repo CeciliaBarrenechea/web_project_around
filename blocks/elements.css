@@ -1,0 +1,74 @@
+.elements {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 21px;
+  column-gap: 18px;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 882px;
+  width: 100%;
+}
+.element {
+  position: relative;
+  width: 282px;
+  height: 361px;
+  background-color: #fff;
+  border-radius: 3%;
+  overflow: hidden;
+}
+.element__photo {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+}
+.element__photo-trash {
+  background-image: url(../images/trash_icon.svg);
+  position: absolute;
+  width: 18px;
+  height: 19.3px;
+  right: 15px;
+  top: 18px;
+  border: none;
+  background-color: transparent;
+}
+.element__info {
+  max-width: 246px;
+  width: 100%;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.element__photo-name {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  align-items: center;
+}
+.element__photo-heart {
+  background-image: url(../images/heart.svg);
+  border: none;
+  background-color: transparent;
+  width: 21px;
+  height: 19px;
+}
+
+@media screen and (max-width: 581px) {
+  .element {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 881px) {
+  .element {
+    margin: auto;
+  }
+}

@@ -1,0 +1,16 @@
+.popup {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+}
+.popup__form {
+  background-color: #fff;
+  width: 430px;
+  height: 330px;
+}

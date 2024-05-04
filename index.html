@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="página web Alrededor de los EE.UU." />
+    <meta name="author" content="Cecilia Barrenechea" />
+    <meta name="keywords" content="HTML,CSS" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./images/img.svg"
+          alt="Alrededor de los EE.UU._logo"
+        />
+      </header>
+      <div class="profile">
+        <div class="profile__left">
+          <div class="profile__circular-avatar">
+            <img
+              class="profile__avatar"
+              src="./images/avatar.jpeg"
+              alt="foto de perfíl"
+            />
+          </div>
+          <div class="profile__info">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <img
+              class="profile__button"
+              src="./images/edit_button_img.svg"
+              alt="Botón para editar"
+            />
+            <p class="profile__paragraph">Explorador</p>
+          </div>
+        </div>
+        <div class="profile__right">
+          <button class="profile__add-button"></button>
+        </div>
+      </div>
+      <div class="popup">
+        <img class="popup__close" src="./images/x.svg" alt="botón de cerrado" />
+        <form class="form popup__form">
+          <h2 class="form__title">Nuevo lugar</h2>
+          <input
+            type="text"
+            name="title"
+            class="form__item form__item_el_title"
+            placeholder="Título"
+          />
+          <input
+            type="text"
+            name="link"
+            class="form__item form__item_el_link"
+            placeholder="Enlace a la imagen"
+          />
+          <button class="form__button" type="submit">Crear</button>
+        </form>
+      </div>
+      <main class="content">
+        <section class="elements">
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card1.jpeg"
+              alt="primera tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Valle de Yosemite</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card2.jpeg"
+              alt="segunda tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Lago Louise</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card3.jpeg"
+              alt="tercera tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Montañas Calvas</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card4.jpeg"
+              alt="cuarta tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Vanois National Park</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card5.jpeg"
+              alt="quinta tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Latemar</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+          <div class="element">
+            <button class="element__photo-trash"></button>
+            <img
+              class="element__photo"
+              src="./images/card6.jpeg"
+              alt="sexta tarjeta"
+            />
+            <div class="element__info">
+              <h2 class="element__photo-name">Lago di Braies</h2>
+              <button class="element__photo-heart"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2024. Cecilia Barrenechea</p>
+      </footer>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
