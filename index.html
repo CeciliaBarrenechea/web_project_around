@@ -11,23 +11,29 @@
   </head>
   <body>
     <div class="page">
-      <div class="popup">
-        <img class="popup__close" src="./images/x.svg" alt="botón de cerrado" />
-        <form class="form popup__form">
-          <h2 class="form__title">Nuevo lugar</h2>
+      <div class="popup" id="popup-profile">
+        <form class="form popup__form" id="form-profile">
+          <img
+            class="popup__close"
+            src="./images/x.svg"
+            alt="botón de cerrado"
+          />
+          <h2 class="form__title">Editar perfil</h2>
           <input
             type="text"
-            name="title"
-            class="form__item form__item_el_title"
-            placeholder="Título"
+            name="full-name"
+            id="input-name"
+            class="form__item form__item_el_name"
+            placeholder="Nombre"
           />
           <input
             type="text"
-            name="link"
-            class="form__item form__item_el_link"
-            placeholder="Enlace a la imagen"
+            name="about"
+            id="input-about"
+            class="form__item form__item_el_about"
+            placeholder="Acerca de mi"
           />
-          <button class="form__button" type="submit">Crear</button>
+          <button class="form__button" type="submit">Guardar</button>
         </form>
       </div>
       <header class="header">

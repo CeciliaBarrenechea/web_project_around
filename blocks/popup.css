@@ -1,5 +1,5 @@
 .popup {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 10;
   justify-content: center;
@@ -9,16 +9,31 @@
   background-color: rgba(0, 0, 0, 0.5);
   flex-direction: column;
 }
+.popup__opened {
+  display: flex;
+}
+
 .popup__form {
   background-color: #fff;
   width: 430px;
   height: 330px;
   border-radius: 4%;
+  position: relative;
 }
 .popup__close {
   position: absolute;
-  top: 205px;
-  right: 391px;
+  top: -30px;
+  right: -30px;
 }
-.popup__show {
+
+@media screen and (max-width: 528px) {
+  .popup__form {
+    width: 282px;
+    height: 322px;
+  }
+  .popup__close {
+    width: 26px;
+    top: -50px;
+    right: 0;
+  }
 }
