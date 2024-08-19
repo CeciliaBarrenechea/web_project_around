@@ -27,7 +27,14 @@
 .form__item_el_name {
   margin: 54px auto 29.8px;
 }
+.form__item_el_title {
+  margin: 54px auto 29.8px;
+}
+
 .form__item_el_about {
+  margin: 0 auto 48px;
+}
+.form__item_el_link {
   margin: 0 auto 48px;
 }
 .form__button {

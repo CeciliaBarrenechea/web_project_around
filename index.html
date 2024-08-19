@@ -17,6 +17,7 @@
             class="popup__close"
             src="./images/x.svg"
             alt="botón de cerrado"
+            id="popup-close-profile"
           />
           <h2 class="form__title">Editar perfil</h2>
           <input
@@ -37,6 +38,46 @@
           />
           <button class="form__button" type="submit">Guardar</button>
         </form>
+      </div>
+      <div class="popup" id="popup-cards">
+        <form class="form popup__form" id="form-cards">
+          <img
+            class="popup__close"
+            src="./images/x.svg"
+            alt="botón de cerrado"
+            id="popup-close-card"
+          />
+          <h2 class="form__title">Agregar Lugar</h2>
+          <input
+            type="text"
+            name="title"
+            id="input-card-title"
+            class="form__item form__item_el_title"
+            placeholder="Título"
+            required
+          />
+          <input
+            type="text"
+            name="link"
+            id="input-card-link"
+            class="form__item form__item_el_link"
+            placeholder="Url del lugar"
+            required
+          />
+          <button class="form__button" type="submit">Guardar</button>
+        </form>
+      </div>
+      <div class="popup" id="popup-image">
+        <div class="popup__container">
+          <img
+            class="popup__close"
+            src="./images/x.svg"
+            alt="botón de cerrado"
+            id="popup-close-image"
+          />
+          <img src="" alt="" class="popup__image-src" />
+          <h3 class="popup__image-title"></h3>
+        </div>
       </div>
       <header class="header">
         <img
@@ -69,85 +110,26 @@
         </div>
       </div>
       <main class="content">
-        <section class="elements">
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card1.jpg"
-              alt="primera tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">Door county, Wisconsin</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card2.jpg"
-              alt="segunda tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">Fairbanks, Alaska</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card3.jpg"
-              alt="tercera tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">Arches National Park</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card4.jpg"
-              alt="cuarta tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">Bryce Canyon</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card5.jpg"
-              alt="quinta tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">Adirondack Mountains</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-          <div class="element">
-            <button class="element__photo-trash"></button>
-            <img
-              class="element__photo"
-              src="./images/card6.jpg"
-              alt="sexta tarjeta"
-            />
-            <div class="element__info">
-              <h2 class="element__photo-name">The Grand Canyon</h2>
-              <button class="element__photo-heart"></button>
-            </div>
-          </div>
-        </section>
+        <section class="elements"></section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2024. Cecilia Barrenechea</p>
       </footer>
     </div>
+    <template id="card-template">
+      <div class="element">
+        <button class="element__photo-trash"></button>
+        <img
+          class="element__photo"
+          src="./images/card1.jpg"
+          alt="primera tarjeta"
+        />
+        <div class="element__info">
+          <h2 class="element__photo-name">Door county, Wisconsin</h2>
+          <button class="element__photo-heart"></button>
+        </div>
+      </div>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

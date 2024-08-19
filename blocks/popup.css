@@ -12,7 +12,20 @@
 .popup__opened {
   display: flex;
 }
-
+.popup__container {
+  position: relative;
+}
+.popup__image-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+}
+.popup__image-src {
+  max-height: 75vh;
+  max-width: 75vw;
+}
 .popup__form {
   background-color: #fff;
   width: 430px;
