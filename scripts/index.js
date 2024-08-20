@@ -61,6 +61,7 @@ function createCard(name, link) {
   });
   cardTitle.textContent = name;
   cardImage.src = link;
+  cardImage.alt = name;
   cardArea.append(card);
 }
 initialCards.forEach(function (item) {
@@ -68,6 +69,8 @@ initialCards.forEach(function (item) {
 });
 
 function handleOpenProfile(evt) {
+  inputName.value = profileName.textContent;
+  inputJob.value = profileJob.textContent;
   popupProfile.classList.add("popup__opened");
 }
 function handleCloseProfile(evt) {

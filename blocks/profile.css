@@ -38,6 +38,10 @@
   max-width: 373px;
   width: 100%;
   margin: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .profile__button {
   width: 24px;
@@ -55,6 +59,9 @@
   text-align: left;
   margin-top: 16px;
   margin-bottom: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .profile__add-button {
   background-image: url(../images/add_button_img.svg);
@@ -91,6 +98,7 @@
   .profile__paragraph {
     font-size: 14px;
     line-height: 16.94px;
+    max-width: 300px;
   }
   .profile__button {
     width: 18px;
