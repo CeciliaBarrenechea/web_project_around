@@ -32,7 +32,7 @@
   background-color: transparent;
 }
 .element__photo-trash:hover {
-  background-image: url(../images/heartHover.svg);
+  opacity: 0.6;
 }
 .element__info {
   max-width: 246px;
@@ -62,6 +62,9 @@
   background-color: transparent;
   width: 21px;
   height: 19px;
+}
+.element__photo-heart:hover {
+  opacity: 0.6;
 }
 .element__photo-heart_active {
   background-image: url(../images/heartactive.svg);
