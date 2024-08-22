@@ -60,7 +60,9 @@
   background-image: url(../images/heart.svg);
   border: none;
   background-color: transparent;
-  width: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 23px;
   height: 19px;
 }
 .element__photo-heart:hover {
