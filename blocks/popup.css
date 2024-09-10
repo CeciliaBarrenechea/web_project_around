@@ -29,7 +29,7 @@
 .popup__form {
   background-color: #fff;
   width: 430px;
-  height: 330px;
+  min-height: 330px;
   border-radius: 4%;
   position: relative;
 }

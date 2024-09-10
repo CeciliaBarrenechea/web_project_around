@@ -72,23 +72,35 @@ function handleOpenProfile(evt) {
   inputName.value = profileName.textContent;
   inputJob.value = profileJob.textContent;
   popupProfile.classList.add("popup__opened");
+  document.addEventListener("keydown", closeOnEsc);
+  document.addEventListener("click", closeOnClick);
 }
 function handleCloseProfile(evt) {
   popupProfile.classList.remove("popup__opened");
+  document.removeEventListener("keydown", closeOnEsc);
+  document.removeEventListener("click", closeOnClick);
 }
 function handleOpenCard(evt) {
   popupCards.classList.add("popup__opened");
+  document.addEventListener("keydown", closeOnEsc);
+  document.addEventListener("click", closeOnClick);
 }
 function handleCloseCard(evt) {
   popupCards.classList.remove("popup__opened");
+  document.removeEventListener("keydown", closeOnEsc);
+  document.removeEventListener("click", closeOnClick);
 }
 function handleOpenImage(title, link) {
   popupImage.classList.add("popup__opened");
   popupImageSrc.src = link;
   popupImageTilte.textContent = title;
+  document.addEventListener("keydown", closeOnEsc);
+  document.addEventListener("click", closeOnClick);
 }
 function handleCloseImage(evt) {
   popupImage.classList.remove("popup__opened");
+  document.removeEventListener("keydown", closeOnEsc);
+  document.removeEventListener("click", closeOnClick);
 }
 
 profileEditButton.addEventListener("click", handleOpenProfile);
@@ -109,3 +121,19 @@ formCards.addEventListener("submit", function handleSubmitProfile(evt) {
   createCard(inputCardTitle.value, inputCardLink.value);
   handleCloseCard();
 });
+
+const closeOnEsc = (evt) => {
+  if (evt.key === "Escape") {
+    handleCloseCard();
+    handleCloseProfile();
+    handleCloseImage();
+  }
+};
+
+const closeOnClick = (evt) => {
+  if (evt.target.classList.contains("popup__opened")) {
+    handleCloseCard();
+    handleCloseProfile();
+    handleCloseImage();
+  }
+};
