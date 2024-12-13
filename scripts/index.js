@@ -67,7 +67,7 @@ function createCard(name, link) {
 }
 initialCards.forEach(function (item) {
   const newCard = new Card(item.name, item.link);
-  cardArea.append(newCard.getCard);
+  cardArea.append(newCard.getCard());
 });
 
 function handleOpenProfile(evt) {
@@ -121,7 +121,7 @@ formProfile.addEventListener("submit", function handleSubmitProfile(evt) {
 formCards.addEventListener("submit", function handleSubmitProfile(evt) {
   evt.preventDefault();
   const newCard = new Card(inputCardTitle.value, inputCardLink.value);
-  cardArea.prepend(newCard.getCard);
+  cardArea.prepend(newCard.getCard());
   handleCloseCard();
 });
 

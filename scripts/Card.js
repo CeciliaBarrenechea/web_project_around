@@ -8,13 +8,19 @@ export default class Card {
     return cardTemplate.querySelector(".element").cloneNode(true);
   }
 
-  toogleLike() {
-    this.cardLikeButton.classList.toogle("element__photo-heart_active");
+  toggleLike() {
+    this.cardLikeButton.classList.toggle("element__photo-heart_active");
+  }
+  removeCard() {
+    this.htmlCard.remove();
   }
 
   setEventListeners() {
-    this.cardLikeButton.addEventListener("click", function () {
-      this.toogleLike();
+    this.cardLikeButton.addEventListener("click", () => {
+      this.toggleLike();
+    });
+    this.cardRemoveButton.addEventListener("click", () => {
+      this.removeCard();
     });
   }
   setProperties() {
