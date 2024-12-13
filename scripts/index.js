@@ -1,3 +1,4 @@
+import Card from "./Card.js";
 const popupProfile = document.querySelector("#popup-profile");
 const popupCards = document.querySelector("#popup-cards");
 const popupImage = document.querySelector("#popup-image");
@@ -62,10 +63,11 @@ function createCard(name, link) {
   cardTitle.textContent = name;
   cardImage.src = link;
   cardImage.alt = name;
-  cardArea.append(card);
+  return card;
 }
 initialCards.forEach(function (item) {
-  createCard(item.name, item.link);
+  const newCard = new Card(item.name, item.link);
+  cardArea.append(newCard.getCard);
 });
 
 function handleOpenProfile(evt) {
@@ -118,7 +120,8 @@ formProfile.addEventListener("submit", function handleSubmitProfile(evt) {
 
 formCards.addEventListener("submit", function handleSubmitProfile(evt) {
   evt.preventDefault();
-  createCard(inputCardTitle.value, inputCardLink.value);
+  const newCard = new Card(inputCardTitle.value, inputCardLink.value);
+  cardArea.prepend(newCard.getCard);
   handleCloseCard();
 });
 
