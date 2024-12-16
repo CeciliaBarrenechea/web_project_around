@@ -23,6 +23,7 @@ export default class Card {
       this.removeCard();
     });
   }
+
   setProperties() {
     this.htmlCard = this.getTemplate();
     this.cardImage = this.htmlCard.querySelector(".element__photo");
