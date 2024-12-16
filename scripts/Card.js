@@ -1,4 +1,6 @@
 const cardTemplate = document.querySelector("#card-template").content;
+//const cardPopup = document.querySelector("#popup-image").content;
+
 export default class Card {
   constructor(name, link) {
     this.name = name;
@@ -39,5 +41,14 @@ export default class Card {
     this.setProperties();
     this.setEventListeners();
     return this.htmlCard;
+  }
+}
+/*class PopupImg {
+  constructor(title, link) {
+    popupImageSrc.src = link;
+    popupImageTilte.textContent = title;
+  }
+  getPopup() {
+    return (cardPopup = document.querySelector("#popup-image").content);
   }
 }
