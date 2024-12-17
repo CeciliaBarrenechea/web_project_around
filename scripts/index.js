@@ -8,7 +8,6 @@ import {
   handleCloseCard,
   handleCloseImage,
   settings,
-  handleOpenImage,
 } from "./utils.js";
 
 const profileEditButton = document.querySelector(".profile__button");
