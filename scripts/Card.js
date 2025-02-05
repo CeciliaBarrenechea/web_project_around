@@ -6,6 +6,7 @@ export default class Card {
   constructor(name, link) {
     this.name = name;
     this.link = link;
+    this.handleClickImage = handleClickImage;
   }
   getTemplate() {
     return cardTemplate.querySelector(".element").cloneNode(true);

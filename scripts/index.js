@@ -10,6 +10,8 @@ import {
   settings,
 } from "./utils.js";
 
+import PopupWithForm from "./PopupWithForm.js";
+import PopupWithImage from "./PopupWithImage.js";
 const profileEditButton = document.querySelector(".profile__button");
 const cardAddButton = document.querySelector(".profile__add-button");
 const profileCloseButton = document.querySelector("#popup-close-profile");
@@ -25,6 +27,13 @@ const inputCardLink = document.querySelector("#input-card-link");
 const formProfile = document.querySelector("#form-profile");
 const formCards = document.querySelector("#form-cards");
 const cardArea = document.querySelector(".elements");
+const popupProfile = new PopupWithForm("#popup-profile");
+const popupCards = new PopupWithForm("#popup-cards");
+const popupImage = new PopupWithImage("#popup-image");
+
+popupProfile.setEventListeners();
+popupImage.setEventListeners();
+popupCards.setEventListeners();
 
 initialCards.forEach(function (item) {
   const newCard = new Card(item.name, item.link);

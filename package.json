@@ -1,0 +1,19 @@
+{
+  "name": "web_project_around",
+  "version": "1.0.0",
+  "description": "En esta página web encontraras fotografias de distintos parques en los Estados Unidos, donde el usuario podrá interactuar con la pagina editando el perfil a su nombre y ocupacion entre otros. Diseñada con HTML,CSS Y JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CeciliaBarrenechea/web_project_around.git"
+  },
+  "author": "Cecilia Barrenechea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CeciliaBarrenechea/web_project_around/issues"
+  },
+  "homepage": "https://github.com/CeciliaBarrenechea/web_project_around#readme"
+}
