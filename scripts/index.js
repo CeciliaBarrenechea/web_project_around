@@ -1,14 +1,6 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
-import {
-  initialCards,
-  handleOpenProfile,
-  handleCloseProfile,
-  handleOpenCard,
-  handleCloseCard,
-  handleCloseImage,
-  settings,
-} from "./utils.js";
+import { initialCards, settings } from "./utils.js";
 
 import PopupWithForm from "./PopupWithForm.js";
 import PopupWithImage from "./PopupWithImage.js";
@@ -30,7 +22,7 @@ const cardArea = document.querySelector(".elements");
 const popupProfile = new PopupWithForm("#popup-profile");
 const popupCards = new PopupWithForm("#popup-cards");
 const popupImage = new PopupWithImage("#popup-image");
-
+console.log(popupProfile);
 popupProfile.setEventListeners();
 popupImage.setEventListeners();
 popupCards.setEventListeners();
@@ -46,22 +38,22 @@ validationProfile.enableValidation();
 const validationCard = new FormValidator(formCards, settings);
 validationCard.enableValidation();
 
-profileEditButton.addEventListener("click", handleOpenProfile);
-cardAddButton.addEventListener("click", handleOpenCard);
-profileCloseButton.addEventListener("click", handleCloseProfile);
-cardCloseButton.addEventListener("click", handleCloseCard);
-ImageCloseButton.addEventListener("click", handleCloseImage);
+profileEditButton.addEventListener("click", () => {
+  popupProfile.open();
+});
+
+cardAddButton.addEventListener("click", () => {
+  popupCards.open();
+});
 
 formProfile.addEventListener("submit", function handleSubmitProfile(evt) {
   evt.preventDefault();
   profileName.textContent = inputName.value;
   profileJob.textContent = inputJob.value;
-  handleCloseProfile();
 });
 
 formCards.addEventListener("submit", function handleSubmitCards(evt) {
   evt.preventDefault();
   const newCard = new Card(inputCardTitle.value, inputCardLink.value);
   cardArea.prepend(newCard.getCard());
-  handleCloseCard();
 });

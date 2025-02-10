@@ -1,8 +1,3 @@
-const popupProfile = document.querySelector("#popup-profile");
-const popupCards = document.querySelector("#popup-cards");
-const popupImage = document.querySelector("#popup-image");
-const popupImageSrc = document.querySelector(".popup__image-src");
-const popupImageTilte = document.querySelector(".popup__image-title");
 export const settings = {
   formSelector: ".form",
   inputSelector: ".form__item",
@@ -51,36 +46,3 @@ const closeOnClick = (evt) => {
     handleCloseImage();
   }
 };
-
-export function handleOpenProfile(evt) {
-  popupProfile.classList.add("popup__opened");
-  document.addEventListener("keydown", closeOnEsc);
-  document.addEventListener("click", closeOnClick);
-}
-export function handleCloseProfile(evt) {
-  popupProfile.classList.remove("popup__opened");
-  document.removeEventListener("keydown", closeOnEsc);
-  document.removeEventListener("click", closeOnClick);
-}
-export function handleOpenCard(evt) {
-  popupCards.classList.add("popup__opened");
-  document.addEventListener("keydown", closeOnEsc);
-  document.addEventListener("click", closeOnClick);
-}
-export function handleCloseCard(evt) {
-  popupCards.classList.remove("popup__opened");
-  document.removeEventListener("keydown", closeOnEsc);
-  document.removeEventListener("click", closeOnClick);
-}
-export function handleOpenImage(title, link) {
-  popupImage.classList.add("popup__opened");
-  popupImageSrc.src = link;
-  popupImageTilte.textContent = title;
-  document.addEventListener("keydown", closeOnEsc);
-  document.addEventListener("click", closeOnClick);
-}
-export function handleCloseImage(evt) {
-  popupImage.classList.remove("popup__opened");
-  document.removeEventListener("keydown", closeOnEsc);
-  document.removeEventListener("click", closeOnClick);
-}

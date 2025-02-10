@@ -1,9 +1,7 @@
-import { handleOpenImage } from "./utils.js";
-
 const cardTemplate = document.querySelector("#card-template").content;
 
 export default class Card {
-  constructor(name, link) {
+  constructor(name, link, handleClickImage) {
     this.name = name;
     this.link = link;
     this.handleClickImage = handleClickImage;
@@ -27,7 +25,7 @@ export default class Card {
       this.removeCard();
     });
     this.cardImage.addEventListener("click", () => {
-      handleOpenImage(this.name, this.link);
+      this.handleClickImage(this.name, this.link);
     });
   }
 
