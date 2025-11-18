@@ -1,31 +1,27 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 import { initialCards, settings } from "./utils.js";
+import Section from "./Section.js";
+import { UserInfo } from "./UserInfo.js";
 
 import PopupWithForm from "./PopupWithForm.js";
 import PopupWithImage from "./PopupWithImage.js";
 const profileEditButton = document.querySelector(".profile__button");
 const cardAddButton = document.querySelector(".profile__add-button");
-const profileCloseButton = document.querySelector("#popup-close-profile");
-const cardCloseButton = document.querySelector("#popup-close-card");
-const ImageCloseButton = document.querySelector("#popup-close-image");
 
-const profileName = document.querySelector(".profile__name");
-const profileJob = document.querySelector(".profile__paragraph");
-const inputName = document.querySelector("#input-name");
-const inputJob = document.querySelector("#input-about");
-const inputCardTitle = document.querySelector("#input-card-title");
-const inputCardLink = document.querySelector("#input-card-link");
 const formProfile = document.querySelector("#form-profile");
 const formCards = document.querySelector("#form-cards");
 const cardArea = document.querySelector(".elements");
+
+const newUserInfo = new UserInfo(".profile__name", ".profile__paragraph");
 const popupProfile = new PopupWithForm("#popup-profile");
 const popupCards = new PopupWithForm("#popup-cards");
 const popupImage = new PopupWithImage("#popup-image");
-console.log(popupProfile);
+
 popupProfile.setEventListeners();
 popupImage.setEventListeners();
 popupCards.setEventListeners();
+newUserInfo.setUserInfo("Ceci B", "Web Developer");
 
 initialCards.forEach(function (item) {
   const newCard = new Card(item.name, item.link);
@@ -44,16 +40,4 @@ profileEditButton.addEventListener("click", () => {
 
 cardAddButton.addEventListener("click", () => {
   popupCards.open();
-});
-
-formProfile.addEventListener("submit", function handleSubmitProfile(evt) {
-  evt.preventDefault();
-  profileName.textContent = inputName.value;
-  profileJob.textContent = inputJob.value;
-});
-
-formCards.addEventListener("submit", function handleSubmitCards(evt) {
-  evt.preventDefault();
-  const newCard = new Card(inputCardTitle.value, inputCardLink.value);
-  cardArea.prepend(newCard.getCard());
 });

@@ -32,17 +32,3 @@ export const initialCards = [
     link: "./images/card6.jpg",
   },
 ];
-const closeOnEsc = (evt) => {
-  if (evt.key === "Escape") {
-    handleCloseCard();
-    handleCloseProfile();
-    handleCloseImage();
-  }
-};
-const closeOnClick = (evt) => {
-  if (evt.target.classList.contains("popup__opened")) {
-    handleCloseCard();
-    handleCloseProfile();
-    handleCloseImage();
-  }
-};
