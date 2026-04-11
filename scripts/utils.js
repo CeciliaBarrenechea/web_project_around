@@ -32,3 +32,16 @@ export const initialCards = [
     link: "./images/card6.jpg",
   },
 ];
+
+// This function can be located here, or it can be a public method in the PopupWithForm and PopupWithFormSubmit classes
+export const renderLoading = (popupSelector, isLoading = false) => {
+  const currentActiveButton = document.querySelector(
+    `${popupSelector} .form__button`
+  );
+  console.log("current action button", currentActiveButton);
+  if (isLoading) {
+    currentActiveButton.textContent = "Guardando...";
+  } else {
+    currentActiveButton.textContent = "Guardar";
+  }
+};

@@ -1,13 +1,31 @@
 const cardTemplate = document.querySelector("#card-template").content;
 
 export default class Card {
-  constructor(name, link, handleClickImage) {
-    this.name = name;
-    this.link = link;
+  constructor(data, handleClickImage) {
+    this.name = data.name;
+    this.link = data.link;
     this.handleClickImage = handleClickImage;
+    this.isLiked = data.isLiked;
   }
   getTemplate() {
     return cardTemplate.querySelector(".element").cloneNode(true);
+  }
+
+  isLiked() {
+    return this.isLiked;
+  }
+
+  _updateLikesView() {
+    if (this.isLiked) {
+      this._likeButton.classList.add("element__photo-heart_active");
+    } else {
+      this._likeButton.classList.remove("element__photo-heart_active");
+    }
+  }
+
+  updateLikesView(data) {
+    this._isLiked = !this._isLiked;
+    this._updateLikesView();
   }
 
   toggleLike() {
@@ -40,6 +58,14 @@ export default class Card {
     this.cardTitle.textContent = this.name;
     this.cardImage.src = this.link;
   }
+
+  getView() {
+    this._element = this.getTemplate();
+    this._likeButton = this._element.querySelector(".element__photo-heart");
+    this._updateLikesView();
+    return this._element;
+  }
+
   getCard() {
     this.setProperties();
     this.setEventListeners();

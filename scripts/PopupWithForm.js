@@ -24,22 +24,23 @@ export default class PopupWithForm extends Popup {
     profileName.textContent = values.name;
     profileJob.textContent = values.about;
   }
-  handleAddCard(values) {
-    const cardArea = document.querySelector(".elements");
-    const newCard = new Card(values.title, values.link);
-    cardArea.prepend(newCard.getCard());
-  }
+  // handleAddCard(values) {
+  //   const cardArea = document.querySelector(".elements");
+  //   const newCard = new Card(values.title, values.link);
+  //   cardArea.prepend(newCard.getCard());
+  // }
   setEventListeners() {
     this.form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const values = this._getInputValues();
-      if (this.popupSelector === "#popup-profile") {
-        this.handleEditProfile(values);
-      }
-      if (this.popupSelector === "#popup-cards") {
-        this.handleAddCard(values);
-      }
-      this.close();
+      // e.preventDefault();
+      // const values = this._getInputValues();
+      // if (this.popupSelector === "#popup-profile") {
+      //   this.handleEditProfile(values);
+      // }
+      // if (this.popupSelector === "#popup-cards") {
+      //   this.handleAddCard(values);
+      // }
+      // this.close();
+      this.handleSubmit(this._getInputValues());
     });
     this.closeButton.addEventListener("click", () => {
       this.close();
