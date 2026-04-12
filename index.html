@@ -77,6 +77,38 @@
           <button class="form__button" type="submit">Guardar</button>
         </form>
       </div>
+      <div class="popup" id="remove-card-popup">
+        <div class="popup__content">
+          <button
+            aria-label="Close modal"
+            type="button"
+            class="popup__close"
+          ></button>
+          <h3 class="popup__title">¿Estás seguro?</h3>
+          <button type="button" class="button popup__button">Si</button>
+        </div>
+      </div>
+      <div class="popup" id="popup-avatar">
+        <form class="form popup__form" id="form-avatar">
+          <img
+            class="popup__close"
+            src="./images/x.svg"
+            alt="botón de cerrado"
+            id="popup-close-card"
+          />
+          <h2 class="form__title">Cambiar foto de perfil</h2>
+          <input
+            type="url"
+            name="avatar"
+            id="input-avatar-link"
+            class="form__item form__item_el_link"
+            placeholder="Url de Avatar"
+            required
+          />
+          <span class="form__item-error input-avatar-link-error"></span>
+          <button class="form__button" type="submit">Guardar</button>
+        </form>
+      </div>
       <div class="popup" id="popup-image">
         <div class="popup__container">
           <img
@@ -98,11 +130,13 @@
       </header>
       <div class="profile">
         <div class="profile__left">
-          <img
-            class="profile__avatar"
-            src="./images/avatar.jpeg"
-            alt="foto de perfíl"
-          />
+          <div class="profile__circular-avatar">
+            <button type="button" class="profile__avatar_button">
+              &#x270E;
+            </button>
+            <img class="profile__avatar" src=" " alt="foto de perfíl" />
+          </div>
+
           <div class="profile__info">
             <div class="profile__title">
               <h1 class="profile__name"></h1>
@@ -136,6 +170,7 @@
         </div>
       </div>
     </template>
+
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>

@@ -21,8 +21,10 @@ export default class PopupWithForm extends Popup {
   handleEditProfile(values) {
     const profileName = document.querySelector(".profile__name");
     const profileJob = document.querySelector(".profile__paragraph");
+    const profileAvatar = document.querySelector(".profile__avatar");
     profileName.textContent = values.name;
     profileJob.textContent = values.about;
+    profileAvatar.src = values.avatar;
   }
   // handleAddCard(values) {
   //   const cardArea = document.querySelector(".elements");
@@ -31,7 +33,7 @@ export default class PopupWithForm extends Popup {
   // }
   setEventListeners() {
     this.form.addEventListener("submit", (e) => {
-      // e.preventDefault();
+      e.preventDefault();
       // const values = this._getInputValues();
       // if (this.popupSelector === "#popup-profile") {
       //   this.handleEditProfile(values);

@@ -33,7 +33,6 @@ export const initialCards = [
   },
 ];
 
-// This function can be located here, or it can be a public method in the PopupWithForm and PopupWithFormSubmit classes
 export const renderLoading = (popupSelector, isLoading = false) => {
   const currentActiveButton = document.querySelector(
     `${popupSelector} .form__button`

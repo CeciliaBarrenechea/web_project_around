@@ -16,6 +16,7 @@
   width: 120px;
   overflow: hidden;
   border-radius: 50%;
+  position: relative;
 }
 .profile__avatar {
   height: 120px;
@@ -23,6 +24,7 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
 .profile__info {
   color: #fff;
 }
@@ -73,7 +75,22 @@
 .profile__add-button:hover {
   opacity: 0.6;
 }
-
+.profile__avatar_button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  &:hover {
+    opacity: 0.9;
+  }
+}
 @media screen and (max-width: 566px) {
   .profile__left {
     flex-direction: column;
